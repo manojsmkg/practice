@@ -1,13 +1,9 @@
 package org.practice.lld.ticTacToe.model;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+
 
 public class Board {
     int size;
-    Queue<Integer> queue = new LinkedList<>();
     Cell[][] cells;
     Piece winner;
 

@@ -17,7 +17,6 @@ public class Game {
     public Piece startGame()
     {
         Scanner scanner = new Scanner(System.in);
-        int counter = 0;
         int totalCells = board.getCells();
         board.printBoard();
         while(totalCells>0) {
@@ -31,9 +30,9 @@ public class Game {
                     y = scanner.nextInt();
                 }
                 totalCells--;
+                if (board.isWinnerAvailable()) return board.winner;
                 if (totalCells <= 0) break;
                 board.printBoard();
-                if (board.isWinnerAvailable()) return board.winner;
             }
         }
         return null;
